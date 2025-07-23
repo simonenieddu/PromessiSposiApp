@@ -1,0 +1,67 @@
+PromessiSposi Academy è una web app gamificata, free-to-play, pensata per far scoprire e approfondire in modo interattivo e coinvolgente la trama de I Promessi Sposi di Alessandro Manzoni. Gli utenti avanzeranno attraverso livelli narrativi, completeranno esercizi di comprensione e quiz a più livelli di difficoltà, guadagnando punti, medaglie e sbloccando contenuti esclusivi.
+2. Obiettivi di Prodotto
+* Educativo: Far comprendere in profondità la trama, i personaggi e i temi de I Promessi Sposi.
+* Engagement: Mantenere alta la motivazione attraverso meccaniche di gamification: punti, classifiche, badge e ricompense.
+* Retention: Incentivare il ritorno e la progressione costante tramite streak giornaliere, sfide settimanali e ricompense a lungo termine.
+* Espansione: Prevedere futuri moduli aggiuntivi su altri classici della letteratura italiana.
+3. Target Audience
+* Studenti delle scuole superiori (15-19 anni).
+* Studenti universitari di materie umanistiche.
+* Appassionati di letteratura italiana.
+4. User Personas
+1. Giulia, 16 anni – Studentessa di Liceo Classico che vuole prepararsi per l'interrogazione.
+2. Luca, 21 anni – Studente di Lettere Moderno che cerca un ripasso rapido e interattivo.
+3. Maria, 35 anni – Appassionata di narrativa che vuole rivivere la lettura con un approccio ludico.
+5. User Stories
+* US1: Come utente, voglio seguire la trama suddivisa in capitoli interattivi, così da non sentirmi sopraffatto.
+* US2: Come utente, voglio svolgere quiz a scelta multipla e vero/falso alla fine di ogni capitolo per testare la comprensione.
+* US3: Come utente, voglio guadagnare punti e badge per ogni attività completata, così da sentirmi motivato.
+* US4: Come utente, voglio vedere la mia progressione nella dashboard e le sfide giornaliere.
+* US5: Come utente, voglio confrontarmi con i miei amici nelle classifiche settimanali.
+6. Specifiche Funzionali
+6.1 Onboarding
+* Registrazione tramite email/social login.
+* Tour iniziale delle funzionalità principali.
+6.2 Narrativa e Lettura Interattiva
+* Contenuti suddivisi in 38 capitoli (o scene chiave) con testo essenziale.
+* Elementi multimediali: illustrazioni, audio letture, note interattive.
+6.3 Esercizi di Comprensione
+* Quiz a fine capitolo: domanda a scelta multipla, vero/falso, abbinamento.
+* Drag&drop per riordinare eventi cronologici.
+6.4 Meccaniche di Gamification
+* Punti esperienza (XP): per ogni esercizio completato.
+* Monete virtuali: spendibili per accedere a contenuti speciali.
+* Badge e trofei: basati su traguardi (es. "Primo Capitolo Completato").
+* Streak giornaliere: bonus XP per accessi consecutivi.
+* Classifiche: globale e tra amici.
+6.5 Dashboard Utente
+* Visualizzazione progresso: capitoli completati, XP totali.
+* Sfide giornaliere e settimanali.
+* Accesso alla lista amici e alle classifiche.
+6.6 Sistema di Notifiche
+* Promemoria push/email per streak e nuove sfide.
+* Avvisi su risultati di quiz e avanzamento amici.
+7. Flussi Utente Principali
+1. Registrazione & Onboarding → Tutorial breve → Scelta primo capitolo.
+2. Lettura Capitolo → Interazione con note mediate → Quiz di verifica.
+3. Ricompense → Accreditamento punti, monete, badge.
+4. Dashboard → Visualizzazione progresso e sfide → Accesso classifica.
+5. Social → Aggiunta amici → Competizione nelle classifiche.
+8. Metriche di Successo (KPIs)
+* DAU/WAU/MAU: tasso di uso giornaliero, settimanale, mensile.
+* Retention a 7 e 30 giorni.
+* Completion rate capitoli (%).
+* Media XP per sessione.
+* Engagement social: numero medio di richieste amicizia e competizioni.
+* Tasso di conversione (eventuali upsell di moduli avanzati futuri).
+9. Vincoli Tecnici
+* Piattaforme supportate: applicazione web responsive per desktop, smartphone (iOS, Android) e tablet (iPad), installabile come PWA.
+* Hosting: piattaforma Altervista (PHP 7.4+, Apache) su ambiente shared hosting.
+* Architettura Frontend: Single Page Application (React o Vue) ospitata via CDN o come asset statici su Altervista.
+* Backend: API RESTful in PHP (Laravel o simile) deployato su Altervista, eseguito con FastCGI.
+* Database: MySQL (versione compatibile Altervista), schema relazionale per utenti, progressi, punteggi e relazioni social.
+* Storage Asset: utilizzo del filesystem di Altervista per immagini e audio, con fallback a CDN esterna per performance.
+* Autenticazione: sessioni PHP + JWT per API se richiesto da client SPA.
+* Scalabilità: ottimizzazione query MySQL, caching in memoria (Memcached se supportato) e caching HTTP sul client.
+* Sicurezza: protezione SQL injection, XSS, CSRF; SSL obbligatorio via HTTPS di Altervista.
+* Browser Support: Chrome, Firefox, Edge, Safari (ultime 2 versioni).
